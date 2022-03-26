@@ -1,14 +1,22 @@
 
 import sys, os, time
-# ________________________________
-so = sys.platform
-so_clear = ''
 
-if (so == 'linux'):
-	so_clear = 'clear'
-elif(so == 'win32'):
-	so_clear = 'cls'
+
 # ________________________________
+
+red = '\033[1;31m'
+green = '\033[1;32m'
+yellow = '\033[1;33m'
+blue = '\033[1;34m'
+magenta = '\033[1;35m'
+cyan = '\033[1;36m'
+cls = '\033[m'
+# ________________________________
+
+so_clear = 'clear'
+
+# ________________________________
+
 
 __author__ = 'VistoPreto'
 __update__ = '24/03/2022'
@@ -16,33 +24,19 @@ __version__ = '0.0001'
 
 # ________________________________
 
-if len(sys.argv) == 1:
-	arg = ''
-elif len(sys.argv) == 2:
-	arg = sys.argv[1]
-else:
-	arg = 'err'
-
-descricao = '''
-
-TeleX.py [ --about ] [ --help : -h : -? ]
-
---about		Sobre o script
---help		Como usar o script 
---start		Inciar funçoes do script
-'''
 def existe():
 	if os.path.isfile('channels.db'):
 		ver()
 	else:
+		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
 		print('Você não possue canais cadrastado\nFavor adicione canais na lista')		
 		print()
-		time.sleep(3)
+		time.sleep(2)
 		start_menu()
 
-
+# ________________________________
 
 
 def ver():
@@ -68,7 +62,7 @@ def ver():
 	for i in lc:
 		print(str(cont) + ']	' + i)
 		cont += 1
-
+	os.system('termux-vibrate -d 100')
 	print()
 	print('0]	Voltar') 
 	print('00]	Sair') 
@@ -87,7 +81,7 @@ def ver():
 		time.sleep(2)
 		ver()
 
-
+# ________________________________
 
 def adicionar():
 	while True:
@@ -114,7 +108,6 @@ Qual o nome do chanal?
 00]	Sair
 
 ''')
-
 		if link == '0':
 			break
 		elif link == '00':
@@ -154,6 +147,26 @@ def start_menu():
 		elif (op == '3'):
 			print(3)
 
+
+
+# ________________________________
+
+
+if len(sys.argv) == 1:
+	arg = ''
+elif len(sys.argv) == 2:
+	arg = sys.argv[1]
+else:
+	arg = 'err'
+
+descricao = '''
+
+TeleX.py [ --about ] [ --help : -h : -? ]
+
+--about		Sobre o script
+--help		Como usar o script 
+--start		Inciar funçoes do script
+'''
 
 def arg_analise(x):
 
