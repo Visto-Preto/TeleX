@@ -39,7 +39,7 @@ def existe():
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
-		print('Você não possue canais cadrastado\nFavor adicione canais na lista')		
+		print(red + 'Você não possue canais cadrastado\nFavor adicione canais na lista' + cls)		
 		print()
 		time.sleep(2)
 
@@ -67,7 +67,7 @@ def ver():
 	os.system('termux-vibrate -d 100')
 	cont = 1
 	for i in lc:
-		print(blue + str(cont) + cls + ']	' + cyan + i)
+		print(blue + str(cont) + cls + ']	' + magenta + i)
 		cont += 1
 	print()
 	print(blue + '0' + cls + ']' + cyan + '	Voltar') 
@@ -93,7 +93,7 @@ def ver():
 		os.system(so_clear)
 		banner()
 		print()
-		print('Abrindo o canal', lcc)
+		print(cls + 'Abrindo o canal' + grenn + lcc)
 		os.system('termux-open-url ' + lll)
 		print()
 		time.sleep(2)
@@ -107,10 +107,10 @@ def adicionar():
 		os.system(so_clear)
 		banner()
 		channel = input('''
-Qual o nome do chanal?
+\033[1;33mQual o nome do chanal?\033[m
 
-0]	Voltar
-00]	Sair
+\033[1;35m0\033[m]	\033[1;35mVoltar\033[m
+\033[1;35m00\033[m]	\033[1;35mSair\033[m
 
 ''')
 
