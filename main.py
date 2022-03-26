@@ -65,6 +65,9 @@ def ver():
 	print()
 	print('0]	Voltar') 
 	print('00]	Sair') 
+	
+	lcc = lc[(int(op_id) - 1)]
+	lll = ll[(int(op_id) - 1)]
 	op_ver = input('\nEntre com o numero da opção:\n\n')
 	op_id = op_ver
 	if op_ver == '0':
@@ -77,8 +80,8 @@ def ver():
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
-		print('Abrindo o canal', lc[(int(op_id) - 1)])
-		os.system('termux-open-url', ll[(int(op_id) - 1)])
+		print('Abrindo o canal', lcc)
+		os.system('termux-open-url', lll)
 		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
 		os.system('termux-music 0')
 		print()
