@@ -70,8 +70,9 @@ def ver():
 		print(blue + str(cont) + cls + ']	' + magenta + i)
 		cont += 1
 	print()
-	print(blue + '0' + cls + ']' + cyan + '	Voltar') 
-	print(blue + '00' + cls +']'+ cyan + '	Sair') 
+	print(blue + '0' + cls + ']' + magenta + '	Voltar') 
+	print(blue + '00' + cls +']'+ magenta + '	Sair') 
+	print()
 
 	op_ver = input('\n' + yellow + 'Entre com o numero da opção:\n\n' + cls)
 	op_id = op_ver
@@ -106,8 +107,10 @@ def adicionar():
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
-		print(blue + '0' + cls + ']' + cyan + '	Voltar') 
-		print(blue + '00' + cls +']'+ cyan + '	Sair') 
+		print(blue + '0' + cls + ']' + magenta + '	Voltar') 
+		print(blue + '00' + cls +']'+ magenta + '	Sair')
+		print()
+		print() 
 		channel = input(yellow + 'Qual o nome do chanal?\n\n' + cls)
 
 		if channel == '0':
@@ -120,13 +123,12 @@ def adicionar():
 			os.system(so_clear)
 			sys.exit()
 		os.system(so_clear)
-		link = input('''
-Qual o link do chanal?
-
-0]	Voltar
-00]	Sair
-
-''')
+		print()
+		print(blue + '0' + cls + ']' + magenta + '	Voltar') 
+		print(blue + '00' + cls +']'+ magenta + '	Sair')
+		print()
+		print() 
+		link = input(yellow + 'Qual o link do chanal?\n\n' + cls)
 		if link == '0':
 			break
 		elif link == '00':
