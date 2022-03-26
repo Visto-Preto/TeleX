@@ -74,6 +74,9 @@ def ver():
 		pass
 	elif op_ver == '00':
 		os.system('termux-vibrate -d 100')
+		time.sleep(1)
+		os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
+		os.system('termux-music 9')
 		os.system(so_clear)
 		sys.exit()
 	elif op_ver == op_id:
@@ -107,6 +110,9 @@ Qual o nome do chanal?
 			break
 		elif channel == '00':
 			os.system('termux-vibrate -d 100')
+			time.sleep(1)
+			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
+			os.system('termux-music 9')
 			os.system(so_clear)
 			sys.exit()
 		os.system(so_clear)
@@ -121,6 +127,9 @@ Qual o link do chanal?
 			break
 		elif link == '00':
 			os.system('termux-vibrate -d 100')
+			time.sleep(1)
+			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
+			os.system('termux-music 9')
 			os.system(so_clear)
 			sys.exit()
 		else:
@@ -149,6 +158,10 @@ def start_menu():
 		op = input('Entre com o numero da opção:\n\n')
 
 		if (op == '00'):
+			os.system('termux-vibrate -d 100')
+			time.sleep(1)
+			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
+			os.system('termux-music 9')
 			break
 		elif (op == '1'):
 			existe()
