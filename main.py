@@ -16,7 +16,11 @@ cls = '\033[m'
 so_clear = 'clear'
 
 # ________________________________
-
+def banner():
+	os.system('figlet TeleX | lolcat')
+	print()
+	print()
+# ________________________________
 
 __author__ = 'VistoPreto'
 __update__ = '24/03/2022'
@@ -28,6 +32,7 @@ def existe():
 	if os.path.isfile('channels.db'):
 		ver()
 	else:
+		banner()
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
@@ -49,8 +54,7 @@ def ver():
 	lc = []
 
 	os.system(so_clear)
-	print()
-
+	banner()
 	while len(l) > 0:
 		ll += l[1:2]
 		lc += l[0:1]
@@ -76,14 +80,15 @@ def ver():
 		os.system('termux-vibrate -d 100')
 		time.sleep(1)
 		os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
-		os.system('termux-music 9')
+		os.system('termux-volume music 9')
 		os.system(so_clear)
 		sys.exit()
 	elif op_ver == op_id:
 		os.system('termux-vibrate -d 100')
 		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
-		os.system('termux-music 0')
+		os.system('termux-volume music 0')
 		os.system(so_clear)
+		banner()
 		print()
 		print('Abrindo o canal', lcc)
 		os.system('termux-open-url ' + lll)
@@ -97,7 +102,7 @@ def adicionar():
 	while True:
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
-		print()
+		banner()
 		channel = input('''
 Qual o nome do chanal?
 
@@ -139,6 +144,7 @@ Qual o link do chanal?
 				db.write(link)
 				db.write("\n") 
 			os.system(so_clear)
+			banner()
 			os.system('termux-vibrate -d 100')
 			print('O canal', channel, 'foi adicionado a lista')
 			time.sleep(2)
@@ -149,6 +155,7 @@ def start_menu():
 	while True:
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
+		banner()
 		print('''
 1]	Ver lista de canais
 2]	Adicionar canais
