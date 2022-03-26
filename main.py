@@ -1,3 +1,4 @@
+#!/dada/dada/com.termux/files/usr/bin/python3
 
 import sys, os, time
 
@@ -18,6 +19,8 @@ so_clear = 'clear'
 # ________________________________
 def banner():
 	os.system('figlet TeleX | lolcat')
+	print()
+	print(red + '+' + cls + '}--------' + cyan + 'Visto-Preto' + cls + '--------{' + red '+' + cls)
 	print()
 	print()
 # ________________________________
@@ -157,10 +160,10 @@ def start_menu():
 		os.system(so_clear)
 		banner()
 		print('''
-1]	Ver lista de canais
-2]	Adicionar canais
+\033[1;34m1\033[m]	Ver lista de canais
+\033[1;34m2\033[m]]	Adicionar canais
 
-00]	Sair
+\033[m]00\033[m]	Sair
 			''')
 		op = input('Entre com o numero da opção:\n\n')
 
@@ -168,7 +171,7 @@ def start_menu():
 			os.system('termux-vibrate -d 100')
 			time.sleep(1)
 			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
-			os.system('termux-music 9')
+			os.system('termux-volume music 9')
 			break
 		elif (op == '1'):
 			existe()
