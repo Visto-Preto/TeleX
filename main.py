@@ -34,7 +34,6 @@ def existe():
 		print('Você não possue canais cadrastado\nFavor adicione canais na lista')		
 		print()
 		time.sleep(2)
-		start_menu()
 
 # ________________________________
 
@@ -58,25 +57,30 @@ def ver():
 		t = len(l)
 		l = l[2:t]
 
+	os.system('termux-vibrate -d 100')
 	cont = 1
 	for i in lc:
 		print(str(cont) + ']	' + i)
 		cont += 1
-	os.system('termux-vibrate -d 100')
 	print()
 	print('0]	Voltar') 
 	print('00]	Sair') 
 	op_ver = input('\nEntre com o numero da opção:\n\n')
 	op_id = op_ver
 	if op_ver == '0':
-		start_menu()
+		pass
 	elif op_ver == '00':
+		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		sys.exit()
 	elif op_ver == op_id:
+		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
-		print(ll[(int(op_id) - 1)])
+		print('Abrindo o canal', lc[(int(op_id) - 1)])
+		os.system('termux-open-url', ll[(int(op_id) - 1)])
+		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
+		os.system('termux-music 0')
 		print()
 		time.sleep(2)
 		ver()
@@ -85,6 +89,7 @@ def ver():
 
 def adicionar():
 	while True:
+		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print()
 		channel = input('''
@@ -98,11 +103,12 @@ Qual o nome do chanal?
 		if channel == '0':
 			break
 		elif channel == '00':
+			os.system('termux-vibrate -d 100')
 			os.system(so_clear)
 			sys.exit()
 		os.system(so_clear)
 		link = input('''
-Qual o nome do chanal?
+Qual o link do chanal?
 
 0]	Voltar
 00]	Sair
@@ -111,6 +117,7 @@ Qual o nome do chanal?
 		if link == '0':
 			break
 		elif link == '00':
+			os.system('termux-vibrate -d 100')
 			os.system(so_clear)
 			sys.exit()
 		else:
@@ -120,6 +127,7 @@ Qual o nome do chanal?
 				db.write(link)
 				db.write("\n") 
 			os.system(so_clear)
+			os.system('termux-vibrate -d 100')
 			print('O canal', channel, 'foi adicionado a lista')
 			time.sleep(2)
 
@@ -127,11 +135,11 @@ Qual o nome do chanal?
 
 def start_menu():
 	while True:
+		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
 		print('''
 1]	Ver lista de canais
 2]	Adicionar canais
-3]	Excluir canais
 
 00]	Sair
 			''')
@@ -141,13 +149,8 @@ def start_menu():
 			break
 		elif (op == '1'):
 			existe()
-			break
 		elif (op == '2'):
 			adicionar()
-		elif (op == '3'):
-			print(3)
-
-
 
 # ________________________________
 
