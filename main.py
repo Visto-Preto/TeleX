@@ -67,13 +67,13 @@ def ver():
 	os.system('termux-vibrate -d 100')
 	cont = 1
 	for i in lc:
-		print(str(cont) + ']	' + i)
+		print(blue + str(cont) + cls + ']	' + cyan + i)
 		cont += 1
 	print()
-	print('0]	Voltar') 
-	print('00]	Sair') 
+	print(blue + '0' + cls + ']' + cyan + '	Voltar') 
+	print(blue + '00' + cls +']'+ cyan + '	Sair') 
 
-	op_ver = input('\nEntre com o numero da opção:\n\n')
+	op_ver = input('\n' + yellow + 'Entre com o numero da opção:\n\n' + cls)
 	op_id = op_ver
 	lcc = str(lc[(int(op_id) - 1)])
 	lll = str(ll[(int(op_id) - 1)])
@@ -161,9 +161,9 @@ def start_menu():
 		banner()
 		print('''
 \033[1;34m1\033[m]	\033[1;35mVer lista de canais\033[m
-\033[1;34m2\033[m]]	\033[1;35mAdicionar canais\033[m
+\033[1;34m2\033[m]	\033[1;35mAdicionar canais\033[m
 
-\033[m00\033[m]	\033[1;35mSair\033[m
+\033[1;34m00\033[m]	\033[1;35mSair\033[m
 			''')
 		op = input(yellow + 'Entre com o numero da opção:\n\n' + cls)
 
