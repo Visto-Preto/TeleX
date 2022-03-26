@@ -68,8 +68,8 @@ def ver():
 
 	op_ver = input('\nEntre com o numero da opção:\n\n')
 	op_id = op_ver
-	lcc = lc[(int(op_id) - 1)]
-	lll = ll[(int(op_id) - 1)]
+	lcc = str(lc[(int(op_id) - 1)])
+	lll = str(ll[(int(op_id) - 1)])
 	if op_ver == '0':
 		pass
 	elif op_ver == '00':
@@ -78,12 +78,12 @@ def ver():
 		sys.exit()
 	elif op_ver == op_id:
 		os.system('termux-vibrate -d 100')
+		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
+		os.system('termux-music 0')
 		os.system(so_clear)
 		print()
 		print('Abrindo o canal', lcc)
-		os.system('termux-open-url ' + str(lll))
-		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
-		os.system('termux-music 0')
+		os.system('termux-open-url ' + lll)
 		print()
 		time.sleep(2)
 		ver()
