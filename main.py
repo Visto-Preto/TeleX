@@ -65,11 +65,11 @@ def ver():
 	print()
 	print('0]	Voltar') 
 	print('00]	Sair') 
-	
-	lcc = lc[(int(op_id) - 1)]
-	lll = ll[(int(op_id) - 1)]
+
 	op_ver = input('\nEntre com o numero da opção:\n\n')
 	op_id = op_ver
+	lcc = lc[(int(op_id) - 1)]
+	lll = ll[(int(op_id) - 1)]
 	if op_ver == '0':
 		pass
 	elif op_ver == '00':
