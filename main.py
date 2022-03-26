@@ -81,7 +81,7 @@ def ver():
 		os.system(so_clear)
 		print()
 		print('Abrindo o canal', lcc)
-		os.system('termux-open-url', lll)
+		os.system('termux-open-url ' + str(lll))
 		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
 		os.system('termux-music 0')
 		print()
