@@ -105,14 +105,10 @@ def adicionar():
 	while True:
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
-		banner()
-		channel = input('''
-\033[1;33mQual o nome do chanal?\033[m
-
-\033[1;35m0\033[m]	\033[1;35mVoltar\033[m
-\033[1;35m00\033[m]	\033[1;35mSair\033[m
-
-''')
+		print()
+		print(blue + '0' + cls + ']' + cyan + '	Voltar') 
+		print(blue + '00' + cls +']'+ cyan + '	Sair') 
+		channel = input(yellow + 'Qual o nome do chanal?\n\n' + cls)
 
 		if channel == '0':
 			break
