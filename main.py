@@ -2,7 +2,6 @@
 
 import sys, os, time
 
-
 # ________________________________
 
 red = '\033[1;31m'
@@ -29,19 +28,6 @@ __author__ = 'VistoPreto'
 __update__ = '24/03/2022'
 __version__ = '0.0001'
 
-# ________________________________
-
-def existe():
-	if os.path.isfile('channels.db'):
-		ver()
-	else:
-		banner()
-		os.system('termux-vibrate -d 100')
-		os.system(so_clear)
-		print()
-		print(red + 'Você não possue canais cadrastado\nFavor adicione canais na lista' + cls)		
-		print()
-		time.sleep(2)
 
 # ________________________________
 
@@ -75,11 +61,22 @@ def ver():
 	print()
 
 	op_ver = input('\n' + yellow + 'Entre com o numero da opção:\n\n' + cls)
-	op_id = op_ver
-	lcc = str(lc[(int(op_id) - 1)])
-	lll = str(ll[(int(op_id) - 1)])
+
+	if op_ver.isnumeric():
+		if op_ver != 0:
+			if int(op_ver) > len(lc):
+				existe()
+			else:
+				op_id = op_ver
+				lcc = str(lc[(int(op_id) - 1)])
+				lll = str(ll[(int(op_id) - 1)])
+		else:
+			op_id = str(op_ver)
+	else:
+		existe()
+
 	if op_ver == '0':
-		pass
+		start_menu()
 	elif op_ver == '00':
 		os.system('termux-vibrate -d 100')
 		time.sleep(1)
@@ -98,7 +95,23 @@ def ver():
 		os.system('termux-open-url ' + lll)
 		print()
 		time.sleep(3)
+		existe()
+
+
+
+# ________________________________
+
+def existe():
+	if os.path.isfile('channels.db'):
 		ver()
+	else:
+		banner()
+		os.system('termux-vibrate -d 100')
+		os.system(so_clear)
+		print()
+		print(red + 'Você não possue canais cadrastado\nFavor adicione canais na lista' + cls)		
+		print()
+		time.sleep(2)
 
 # ________________________________
 
