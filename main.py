@@ -89,15 +89,15 @@ def ver():
 		sys.exit()
 	elif op_ver == op_id:
 		os.system('termux-vibrate -d 100')
-		os.system('termux-toast -b black -c green -g middle -s Volume de mídia silenciada')
+		os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 0%')
 		os.system('termux-volume music 0')
 		os.system(so_clear)
 		banner()
 		print()
-		print(cls + 'Abrindo o canal' + grenn + lcc)
+		print(cls + 'Abrindo o canal ' + green + lcc)
 		os.system('termux-open-url ' + lll)
 		print()
-		time.sleep(2)
+		time.sleep(3)
 		ver()
 
 # ________________________________
