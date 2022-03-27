@@ -119,7 +119,7 @@ def adicionar():
 			os.system('termux-vibrate -d 100')
 			time.sleep(1)
 			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
-			os.system('termux-music 9')
+			os.system('termux-volume music 9')
 			os.system(so_clear)
 			sys.exit()
 		os.system(so_clear)
@@ -135,7 +135,7 @@ def adicionar():
 			os.system('termux-vibrate -d 100')
 			time.sleep(1)
 			os.system('termux-toast -b black -c green -g middle -s Volume de mídia em 60%')
-			os.system('termux-music 9')
+			os.system('termux-volume music 9')
 			os.system(so_clear)
 			sys.exit()
 		else:
@@ -147,7 +147,7 @@ def adicionar():
 			os.system(so_clear)
 			banner()
 			os.system('termux-vibrate -d 100')
-			print('O canal', channel, 'foi adicionado a lista')
+			print(cls + 'O canal ' + green + channel + cls + ' foi adicionado a lista')
 			time.sleep(2)
 
 # ________________________________
