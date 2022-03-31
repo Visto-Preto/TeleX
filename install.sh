@@ -11,5 +11,7 @@ git clone https://github.com/Visto-Preto/TeleX.git telex
 cat telex/telex > /data/data/com.termux/files/usr/bin/telex
 chmod 700 /data/data/com.termux/files/usr/bin/telex
 cp -R telex /data/data/com.termux/files/usr/share/
+rm -rf telex
+
 echo -e '\n\n'
 echo -e 'Para iniciar o Telex entre com o comando: \033[1;32mtelex\033[m'
