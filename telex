@@ -14,12 +14,13 @@ else:
 
 descricao = '''
 
-TeleX.py [ -about ] [ -help : -h : -? ] [ -unistall ]
+TeleX.py [ -about ] [ -help : -h : -? ] [ -uninstall ]
 
 -about		Sobre o script
 -help		Como usar o script 
 -start		Inciar funçoes do script
--unistall	Remover instalacao do script
+-unistall	Remover instalação do script
+
 '''
 
 def arg_analise(x):
@@ -33,8 +34,8 @@ def arg_analise(x):
 		print('legal')
 	elif x == '-start':
 		os.system('python /data/data/com.termux/files/usr/share/telex/main.py')
-	elif x == '-unistall':
-		os.system('bash /data/data/com.termux/files/usr/share/telex/unistall')
+	elif x == '-uninstall':
+		os.system('bash /data/data/com.termux/files/usr/share/telex/uninstall')
 	elif x == '' or x == 'err':
 		print(descricao)
 	else:
