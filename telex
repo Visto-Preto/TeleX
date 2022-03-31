@@ -23,7 +23,7 @@ TeleX.py [ -about ] [ -help : -h : -? ] [ -unistall ]
 '''
 
 def arg_analise(x):
-        if x == '-about':
+	if x == '-about':
 		print()
 		print('Desenvolvido por ', __author__)
 		print('Version ', __version__)
