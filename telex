@@ -21,7 +21,7 @@ else:
 
 descricao = '''
 
-TeleX.py [ -about ] [ -start ] [ -uninstall ]
+TeleX.py [ -about ] [ -start ] [ -uninstall ] [ -upgrade ]
 
 -about		Sobre o script
 -start		Inciar funçoes do script
