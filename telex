@@ -7,7 +7,6 @@ import sys, os
 # ________________________________
 
 __author__ = 'VistoPreto'
-__update__ = '24/03/2022'
 __version__ = '0.02'
 
 # ________________________________
@@ -27,6 +26,7 @@ TeleX.py [ -about ] [ -start ] [ -uninstall ]
 -about		Sobre o script
 -start		Inciar funçoes do script
 -unistall	Remover instalação do script
+-upgrade	Atualiza o script para versão mais atual
 
 '''
 
@@ -35,12 +35,13 @@ def arg_analise(x):
 		print()
 		print('Desenvolvido por ', __author__)
 		print('Version ', __version__)
-		print('Ultimo update ', __update__)
 		print()
 	elif x == '-start':
 		os.system('python /data/data/com.termux/files/usr/share/telex/main.py')
 	elif x == '-uninstall':
 		os.system('bash /data/data/com.termux/files/usr/share/telex/uninstall')
+	elif x == '-upgrade':
+		os.system('bash /data/data/com.termux/files/usr/share/telex/upgrade')
 	elif x == '' or x == 'err':
 		print(descricao)
 	else:
