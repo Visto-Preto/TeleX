@@ -4,3 +4,4 @@ rm -Rf /data/data/com.termux/files/usr/share/telex
 rm -Rf /data/data/com.termux/files/usr/bin/telex
 echo ''
 echo 'Telex desinstalado'
+echo ''
