@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 
-import os, time
+import sys, os, time
 
 # ________________________________
 
