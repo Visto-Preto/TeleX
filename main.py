@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 
-import sys, os, time
+import os, time
 
 # ________________________________
 
@@ -16,6 +16,7 @@ cls = '\033[m'
 so_clear = 'clear'
 
 # ________________________________
+
 def banner():
 	os.system('figlet TeleX | lolcat')
 	print()
@@ -28,12 +29,10 @@ __author__ = 'VistoPreto'
 __update__ = '24/03/2022'
 __version__ = '0.0001'
 
-
 # ________________________________
 
-
 def ver():
-	db = open('channels.db', 'r')
+	db = open('/data/data/com.termux/files/usr/share/telex/channels.db', 'r')
 	ver_db = db.read()
 	db.close()
 	l = ver_db.split('\n')
@@ -96,13 +95,11 @@ def ver():
 		print()
 		time.sleep(3)
 		existe()
-
-
-
 # ________________________________
 
 def existe():
-	if os.path.isfile('channels.db'):
+
+	if os.path.isfile('/data/data/com.termux/files/usr/share/telex/channels.db'):
 		ver()
 	else:
 		banner()
@@ -112,10 +109,10 @@ def existe():
 		print(red + 'Você não possue canais cadrastado\nFavor adicione canais na lista' + cls)		
 		print()
 		time.sleep(2)
-
 # ________________________________
 
 def adicionar():
+
 	while True:
 		os.system('termux-vibrate -d 100')
 		os.system(so_clear)
@@ -142,6 +139,7 @@ def adicionar():
 		print()
 		print() 
 		link = input(yellow + 'Qual o link do chanal?\n\n' + cls)
+
 		if link == '0':
 			break
 		elif link == '00':
@@ -152,7 +150,7 @@ def adicionar():
 			os.system(so_clear)
 			sys.exit()
 		else:
-			with open('channels.db', 'a') as db:
+			with open('/data/data/com.termux/files/usr/share/telex/channels.db', 'a') as db:
 				db.write(channel)
 				db.write('\n') 
 				db.write(link)
@@ -192,40 +190,4 @@ def start_menu():
 
 # ________________________________
 
-
-if len(sys.argv) == 1:
-	arg = ''
-elif len(sys.argv) == 2:
-	arg = sys.argv[1]
-else:
-	arg = 'err'
-
-descricao = '''
-
-TeleX.py [ --about ] [ --help : -h : -? ]
-
---about		Sobre o script
---help		Como usar o script 
---start		Inciar funçoes do script
-'''
-
-def arg_analise(x):
-
-	if x == '--about':
-		print()
-		print('Desenvolvido por ', __author__)
-		print('Version ', __version__)
-		print('Ultimo update ', __update__)
-
-	elif x == '--help' or x == '-h' or x == '-?':
-		print('legal')
-
-	elif x == '--start':
-		start_menu()
-
-	elif x == '' or x == 'err':
-		print(descricao)
-	else:
-		print(descricao)
-
-arg_analise(arg)
+start_menu()

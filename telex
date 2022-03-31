@@ -1,0 +1,47 @@
+#!/data/data/com.termux/files/usr/bin/python3
+
+import sys, os
+
+# ________________________________
+
+
+if len(sys.argv) == 1:
+        arg = ''
+elif len(sys.argv) == 2:
+        arg = sys.argv[1]
+else:
+        arg = 'err'
+
+descricao = '''
+
+TeleX.py [ -about ] [ -help : -h : -? ] [ -unistall ]
+
+-about		Sobre o script
+-help		Como usar o script 
+-start		Inciar funçoes do script
+-unistall	Remover instalacao do script
+'''
+
+def arg_analise(x):
+        if x == '-about':
+                print()
+                print('Desenvolvido por ', __author__)
+                print('Version ', __version__)
+                print('Ultimo update ', __update__)
+		print()
+
+        elif x == '-help' or x == '-h' or x == '-?':
+                print('legal')
+
+        elif x == '-start':
+                os.system('python /data/data/com.termux/files/usr/share/telex/main.py')
+
+        elif x == '-unistall':
+		os.system('bash /data/data/com.termux/files/usr/share/telex/unistall')
+
+        elif x == '' or x == 'err':
+                print(descricao)
+        else:
+                print(descricao)
+
+arg_analise(arg)
