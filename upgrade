@@ -1,0 +1,7 @@
+clear
+rm -Rf /data/data/com.termux/files/usr/share/telex
+rm -Rf /data/data/com.termux/files/usr/bin/telex
+echo ''
+echo 'Telex desinstalado'
+echo ''
+curl -sLf https://raw.githubusercontent.com/Visto-Preto/TeleX/master/install.sh | bash
