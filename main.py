@@ -23,11 +23,6 @@ def banner():
 	print(red + '+' + cls + '}--------' + cyan + 'Visto-Preto' + cls + '--------{' + red + '+' + cls)
 	print()
 	print()
-# ________________________________
-
-__author__ = 'VistoPreto'
-__update__ = '24/03/2022'
-__version__ = '0.0001'
 
 # ________________________________
 
