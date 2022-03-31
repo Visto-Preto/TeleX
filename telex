@@ -14,10 +14,9 @@ else:
 
 descricao = '''
 
-TeleX.py [ -about ] [ -help : -h : -? ] [ -uninstall ]
+TeleX.py [ -about ] [ -start ] [ -uninstall ]
 
 -about		Sobre o script
--help		Como usar o script 
 -start		Inciar funçoes do script
 -unistall	Remover instalação do script
 
@@ -30,8 +29,6 @@ def arg_analise(x):
 		print('Version ', __version__)
 		print('Ultimo update ', __update__)
 		print()
-	elif x == '-help' or x == '-h' or x == '-?':
-		print('legal')
 	elif x == '-start':
 		os.system('python /data/data/com.termux/files/usr/share/telex/main.py')
 	elif x == '-uninstall':
