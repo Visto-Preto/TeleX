@@ -23,3 +23,4 @@ rm -rf telex
 
 echo -e '\n\n'
 echo -e 'Para iniciar o Telex entre com o comando: \033[1;32mtelex\033[m'
+echo -e '\n\n'
