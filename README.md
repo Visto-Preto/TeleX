@@ -18,4 +18,4 @@ O usuário pode adicionar quantos canais querer na lista.
 curl -sLf https://raw.githubusercontent.com/Visto-Preto/TeleX/master/install.sh | bash
 
 ## Uso
-Digite o comando 'telex' no terminal
+Digite o comando **telex** no terminal
