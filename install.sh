@@ -1,5 +1,13 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+echo -e '\n\n'
+echo -e '\033[1;31mInstalando dependências...\033[m'
+echo -e '\n'
+apt update && apt upgrade -y
+apt install -y python figlet termux-api
+
+pip install requests lolcat
+
 clear
 termux-vibrate -d 100
 figlet TeleX | lolcat
