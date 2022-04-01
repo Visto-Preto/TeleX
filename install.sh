@@ -4,7 +4,6 @@ clear
 echo -e '\n\n'
 echo -e '\033[1;31mInstalando dependências...\033[m'
 echo -e '\n'
-pkg update && pkg upgrade -y
 pkg install python figlet termux-api
 pip install requests lolcat
 clear
