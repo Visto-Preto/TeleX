@@ -1,3 +1,5 @@
+ # TeleX
+ 
  <img src="img/logo.png" width="510" /> 
  
 O TeleX é um script desenvolvido para ter acesso a canais do telegram sem a 
@@ -18,6 +20,7 @@ O usuário pode adicionar quantos canais querer na lista.
 
 ## Requisitos
  **Termux**  https://f-droid.org/pt_BR/packages/com.termux
+ 
 **Termux:API** https://f-droid.org/pt_BR/packages/com.termux.api/
 
 ## Instalação
