@@ -4,7 +4,7 @@ clear
 echo -e '\n\n'
 echo -e '\033[1;31mInstalando dependências...\033[m'
 echo -e '\n'
-pkg install python figlet termux-api
+pkg install python figlet termux-api -y
 pip install requests lolcat
 clear
 termux-vibrate -d 100
