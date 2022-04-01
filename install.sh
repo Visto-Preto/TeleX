@@ -2,7 +2,7 @@
 
 clear
 echo -e '\n\n'
-echo -e '\033[1;31mInstalando depedencias...\033[m'
+echo -e '\033[1;31mInstalando dependências...\033[m'
 echo -e '\n'
 pkg update && pkg upgrade -y
 pkg install python figlet termux-api
@@ -21,6 +21,7 @@ chmod 700 /data/data/com.termux/files/usr/bin/telex
 cp -R telex /data/data/com.termux/files/usr/share/
 rm -rf telex
 
+termux-vibrate -d 100
 echo -e '\n\n'
 echo -e 'Para iniciar o Telex entre com o comando: \033[1;32mtelex\033[m'
-echo -e '\n\n'
+echo -e '\n\n\n'
