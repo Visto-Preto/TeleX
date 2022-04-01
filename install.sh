@@ -1,14 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 clear
-echo -e '\n\n'
-echo -e '\033[1;31mInstalando dependências...\033[m'
-echo -e '\n'
-pkg install python -y
-pkg install figlet -y
-pkg install termux-api -y
-pip install requests lolcat
-clear
 termux-vibrate -d 100
 figlet TeleX | lolcat
 echo -e '\n\n'
