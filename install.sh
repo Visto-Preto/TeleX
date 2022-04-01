@@ -1,9 +1,17 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 clear
+echo -e '\n\n'
+echo -e '\033[1;31mInstalando depedencias...\033[m'
+echo -e '\n'
+pkg update && pkg upgrade -y
+pkg install python figlet termux-api
+pip install requests lolcat
+clear
+termux-vibrate -d 100
 figlet TeleX | lolcat
 echo -e '\n\n'
-echo -e '\033[1;31mInstalando...\033[m'
+echo -e '\033[1;31mInstalando o TeleX...\033[m'
 echo -e '\n'
 
 git clone https://github.com/Visto-Preto/TeleX.git telex
