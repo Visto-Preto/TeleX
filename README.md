@@ -1,7 +1,5 @@
  # TeleX
- 
- <img src="img/logo.png" width="510" /> 
- 
+
 O TeleX é um script desenvolvido para ter acesso a canais do telegram sem a 
 necessidade de entrar no mesmo. 
 Voçê pode salva uma lista de canais para acessa-los e visualizar ou salvar 
