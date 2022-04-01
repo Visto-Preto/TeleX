@@ -22,11 +22,6 @@ O usuário pode adicionar quantos canais querer na lista.
 **Termux:API** https://f-droid.org/pt_BR/packages/com.termux.api/
 
 ## Instalação
-pkg update && pkg upgrade
-
-pkg install python figlet termux-api
-
-pip install requests lolcat
 
 curl -sLf https://raw.githubusercontent.com/Visto-Preto/TeleX/master/install.sh | bash
 
