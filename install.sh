@@ -4,7 +4,7 @@ echo -e '\n\n'
 echo -e '\033[1;31mInstalando dependências...\033[m'
 echo -e '\n'
 apt update && apt upgrade -y
-apt install -y python figlet termux-api
+apt install -y python figlet termux-api git
 
 pip install requests lolcat
 
